@@ -1,856 +1,657 @@
-# HTML atualizado do CreativePack
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Creative Pack PRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuscaOferta</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    html{
-      scroll-behavior:smooth;
+    body {
+      background: #09090b;
+      color: white;
     }
 
-    body{
-      font-family:'Poppins',sans-serif;
-      color:white;
-      overflow-x:hidden;
-      background:
-      radial-gradient(circle at top right, rgba(0,114,255,0.25), transparent 30%),
-      radial-gradient(circle at bottom left, rgba(0,198,255,0.15), transparent 25%),
-      #0d0d0d;
+    a {
+      text-decoration: none;
     }
 
-    a{
-      text-decoration:none;
+    .container {
+      width: 90%;
+      max-width: 1300px;
+      margin: auto;
     }
 
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
+    header {
+      background: #111111;
+      border-bottom: 1px solid #27272a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header{
-      padding:18px 0;
-      position:fixed;
-      width:100%;
-      top:0;
-      z-index:999;
-      backdrop-filter:blur(10px);
-      background:rgba(0,0,0,0.6);
-      border-bottom:1px solid rgba(255,255,255,0.05);
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      flex-wrap: wrap;
     }
 
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:15px;
-      flex-wrap:wrap;
+    .logo h1 {
+      color: #facc15;
+      font-size: 2rem;
+      font-weight: 900;
     }
 
-    .logo{
-      font-size:28px;
-      font-weight:800;
-      background:linear-gradient(90deg,#007596,#0073ff);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
+    .logo p {
+      color: #a1a1aa;
+      font-size: 0.9rem;
     }
 
-    .nav-buttons{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
+    .search-box {
+      flex: 1;
+      max-width: 700px;
+      display: flex;
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 18px;
+      overflow: hidden;
     }
 
-    .btn{
-      padding:14px 28px;
-      border-radius:14px;
-      background:linear-gradient(135deg,#00c6ff,#0073ff);
-      color:white;
-      font-weight:600;
-      transition:0.3s;
-      display:inline-block;
-      box-shadow:0 10px 30px rgba(0,114,255,0.4);
-      text-align:center;
-      position:relative;
-      overflow:hidden;
-      animation:pulse 2s infinite;
+    .search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 18px;
+      font-size: 1rem;
     }
 
-    .btn::before{
-      content:'';
-      position:absolute;
-      top:0;
-      left:-100%;
-      width:100%;
-      height:100%;
-      background:rgba(255,255,255,0.2);
-      transition:0.5s;
+    .search-box button {
+      background: #facc15;
+      color: black;
+      border: none;
+      padding: 18px 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    .btn:hover::before{
-      left:100%;
+    .search-box button:hover {
+      background: #fde047;
     }
 
-    .btn:hover{
-      transform:translateY(-3px);
+    .hero {
+      padding: 100px 0;
     }
 
-    @keyframes pulse{
-      0%{
-        box-shadow:0 0 0 0 rgba(0,114,255,0.7);
+    .hero-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero span {
+      background: rgba(250, 204, 21, 0.1);
+      color: #fde047;
+      padding: 10px 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(250, 204, 21, 0.3);
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+
+    .hero h2 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-top: 25px;
+      font-weight: 900;
+    }
+
+    .hero p {
+      color: #a1a1aa;
+      margin-top: 25px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .btn-primary {
+      background: #facc15;
+      color: black;
+      padding: 16px 35px;
+      border-radius: 18px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #3f3f46;
+      color: white;
+      padding: 16px 35px;
+      border-radius: 18px;
+      transition: 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: #18181b;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 30px;
+      border: 1px solid #27272a;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 900;
+      margin-bottom: 40px;
+    }
+
+    .categories {
+      padding: 40px 0 80px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 20px;
+    }
+
+    .category-card {
+      background: #111111;
+      border: 1px solid #27272a;
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 25px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      border-color: #facc15;
+      transform: translateY(-5px);
+    }
+
+    .products {
+      padding: 80px 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #111111;
+      border: 1px solid #27272a;
+      border-radius: 30px;
+      overflow: hidden;
+      transition: 0.4s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      border-color: #facc15;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      background: white;
+    }
+
+    .product-info {
+      padding: 25px;
+    }
+
+    .product-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #facc15;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .offer-btn {
+      display: block;
+      text-align: center;
+      background: #facc15;
+      color: black;
+      padding: 16px;
+      border-radius: 18px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .offer-btn:hover {
+      background: #fde047;
+    }
+
+    .benefits {
+      background: #111111;
+      border-top: 1px solid #27272a;
+      border-bottom: 1px solid #27272a;
+      padding: 90px 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .benefit-card {
+      background: #09090b;
+      border: 1px solid #27272a;
+      border-radius: 30px;
+      padding: 35px;
+    }
+
+    .benefit-card h3 {
+      color: #facc15;
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+    }
+
+    .benefit-card p {
+      color: #a1a1aa;
+      line-height: 1.7;
+    }
+
+    .newsletter {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .newsletter h2 {
+      font-size: 4rem;
+      font-weight: 900;
+    }
+
+    .newsletter p {
+      color: #a1a1aa;
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .newsletter-form input {
+      width: 400px;
+      max-width: 100%;
+      background: #111111;
+      border: 1px solid #27272a;
+      color: white;
+      padding: 18px;
+      border-radius: 18px;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      background: #facc15;
+      color: black;
+      border: none;
+      padding: 18px 40px;
+      border-radius: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid #27272a;
+      padding-top: 50px;
+      background: #09090b;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding-bottom: 40px;
+    }
+
+    .footer-content h2 {
+      color: #facc15;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    .footer-content p,
+    .footer-content a {
+      color: #a1a1aa;
+      line-height: 2;
+    }
+
+    .copyright {
+      border-top: 1px solid #27272a;
+      text-align: center;
+      padding: 20px;
+      color: #71717a;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      .hero h2 {
+        font-size: 2.8rem;
       }
 
-      70%{
-        box-shadow:0 0 0 18px rgba(0,114,255,0);
+      .newsletter h2 {
+        font-size: 2.5rem;
       }
 
-      100%{
-        box-shadow:0 0 0 0 rgba(0,114,255,0);
+      .section-title {
+        font-size: 2rem;
       }
     }
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      padding-top:150px;
-      padding-bottom:60px;
-    }
-
-    .hero::before{
-      content:'';
-      position:absolute;
-      width:700px;
-      height:700px;
-      background:#0072ff;
-      filter:blur(180px);
-      opacity:0.2;
-      top:-200px;
-      right:-200px;
-    }
-
-    .hero-content{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center;
-    }
-
-    .hero-text h1{
-      font-size:62px;
-      line-height:1.1;
-      margin-bottom:25px;
-      font-weight:800;
-    }
-
-    .gradient{
-      background:linear-gradient(90deg,#00c6ff,#0072ff);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
-
-    .hero-text p{
-      font-size:18px;
-      color:#cfcfcf;
-      margin-bottom:35px;
-      line-height:1.7;
-    }
-
-    .price-box{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      margin-bottom:30px;
-      flex-wrap:wrap;
-    }
-
-    .new-price{
-      font-size:48px;
-      font-weight:800;
-      color:#00c6ff;
-    }
-
-    .delivery{
-      margin-top:20px;
-      color:#00c6ff;
-      font-weight:600;
-      font-size:16px;
-    }
-
-    .counter{
-      margin-top:15px;
-      font-size:18px;
-      color:#00c6ff;
-      font-weight:600;
-    }
-
-    .hero-image{
-      position:relative;
-    }
-
-    .card{
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:30px;
-      padding:25px;
-      backdrop-filter:blur(20px);
-      box-shadow:0 20px 50px rgba(0,0,0,0.4);
-    }
-
-    .software-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:15px;
-    }
-
-    .software{
-      background:#131313;
-      border-radius:18px;
-      padding:20px;
-      text-align:center;
-      transition:0.3s;
-      border:1px solid rgba(255,255,255,0.05);
-    }
-
-    .software:hover{
-      transform:translateY(-5px);
-      border-color:#0072ff;
-    }
-
-    .software h3{
-      font-size:14px;
-      margin-top:10px;
-    }
-
-    .mockup{
-      width:100%;
-      border-radius:25px;
-      margin-top:25px;
-      box-shadow:0 20px 50px rgba(0,0,0,0.5);
-    }
-
-    section{
-      padding:120px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:70px;
-    }
-
-    .section-title h2{
-      font-size:46px;
-      margin-bottom:15px;
-    }
-
-    .section-title p{
-      color:#aaa;
-      max-width:700px;
-      margin:auto;
-      line-height:1.7;
-    }
-
-    .benefits{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:25px;
-    }
-
-    .benefit{
-      background:#121212;
-      border-radius:25px;
-      padding:35px;
-      border:1px solid rgba(255,255,255,0.05);
-      transition:0.3s;
-    }
-
-    .benefit:hover{
-      transform:translateY(-5px);
-      border-color:#0072ff;
-    }
-
-    .benefit h3{
-      margin:20px 0 15px;
-      font-size:22px;
-    }
-
-    .benefit p{
-      color:#bdbdbd;
-      line-height:1.7;
-    }
-
-    .includes{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-      margin-top:40px;
-    }
-
-    .include-item{
-      background:#131313;
-      padding:18px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.05);
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
-    .include-item i{
-      color:#00c6ff;
-      font-size:18px;
-    }
-
-    .testimonials{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:25px;
-      margin-top:50px;
-    }
-
-    .testimonial{
-      background:#131313;
-      padding:30px;
-      border-radius:25px;
-      border:1px solid rgba(255,255,255,0.05);
-    }
-
-    .testimonial p{
-      color:#cfcfcf;
-      line-height:1.7;
-      margin:15px 0;
-    }
-
-    .faq{
-      margin-top:60px;
-    }
-
-    .question{
-      background:#131313;
-      padding:25px;
-      border-radius:20px;
-      margin-bottom:20px;
-      border:1px solid rgba(255,255,255,0.05);
-    }
-
-    .question h3{
-      margin-bottom:10px;
-      color:#00c6ff;
-    }
-
-    .question p{
-      color:#bdbdbd;
-      line-height:1.7;
-    }
-
-    .cta{
-      text-align:center;
-      background:linear-gradient(135deg,#0072ff,#00c6ff);
-      border-radius:40px;
-      padding:80px 40px;
-    }
-
-    .cta h2{
-      font-size:52px;
-      margin-bottom:20px;
-    }
-
-    .cta p{
-      max-width:700px;
-      margin:auto;
-      line-height:1.8;
-      margin-bottom:35px;
-      color:#f5f5f5;
-    }
-
-    .footer-modern{
-      padding:50px 20px;
-      text-align:center;
-      color:#999;
-      border-top:1px solid rgba(255,255,255,0.05);
-    }
-
-    .footer-modern h3{
-      color:white;
-      margin-bottom:15px;
-    }
-
-    .footer-modern p{
-      margin:10px 0;
-    }
-
-    @media(max-width:950px){
-
-      .hero-content{
-        grid-template-columns:1fr;
-      }
-
-      .hero-text{
-        text-align:center;
-      }
-
-      .price-box{
-        justify-content:center;
-      }
-
-      .software-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .benefits,
-      .testimonials{
-        grid-template-columns:1fr;
-      }
-
-      .hero-text h1{
-        font-size:42px;
-      }
-
-      .section-title h2{
-        font-size:34px;
-      }
-
-      .cta h2{
-        font-size:36px;
-      }
-    }
-
-    @media(max-width:600px){
-
-      .hero{
-        padding-top:240px;
-      }
-
-      .nav{
-        flex-direction:column;
-        text-align:center;
-      }
-
-      .nav-buttons{
-        width:100%;
-        flex-direction:column;
-      }
-
-      .btn{
-        width:100%;
-        padding:16px;
-        font-size:16px;
-      }
-
-      .hero-text h1{
-        font-size:30px;
-        line-height:1.2;
-      }
-
-      .hero-text p{
-        font-size:16px;
-      }
-
-      .software-grid,
-      .includes{
-        grid-template-columns:1fr;
-      }
-
-      .section-title h2,
-      .cta h2{
-        font-size:30px;
-      }
-
-      .mockup{
-        margin-top:35px;
-      }
-    }
-
   </style>
 </head>
 <body>
 
-<header>
-  <div class="container nav">
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <h1>BuscaOferta</h1>
+        <p>Pesquise produtos com facilidade</p>
+      </div>
 
-    <div class="logo">
-      CreativePack
+      <div class="search-box">
+        <input type="text" placeholder="Pesquise celulares, notebooks, games...">
+        <button>Buscar</button>
+      </div>
     </div>
+  </header>
 
-    <div class="nav-buttons">
+  <section class="hero">
+    <div class="container hero-content">
+      <div>
+        <span>Marketplace Inteligente</span>
 
-      <a href="https://mpago.la/15WpJsr" target="_blank" class="btn">
-        Comprar Agora
-      </a>
+        <h2>
+          Encontre produtos do Mercado Livre rapidamente
+        </h2>
 
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=plashfire10@gmail.com" target="_blank" class="btn">
-        Contato
-      </a>
+        <p>
+          Pesquise milhares de produtos, descubra promoções e encontre as melhores ofertas em segundos.
+        </p>
 
-    </div>
-
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-content">
-
-    <div class="hero-text">
-
-      <h1>
-        Os programas profissionais usados por
-        <span class="gradient">
-          Designers, Editores e Criadores
-        </span>
-      </h1>
-
-      <p>
-        Tenha acesso aos softwares mais usados do mundo para edição de vídeo, imagem e design em um único pacote vitalício.
-      </p>
-
-      <div class="price-box">
-        <div class="new-price">
-          R$29,90
+        <div class="hero-buttons">
+          <a href="#produtos" class="btn-primary">Explorar Ofertas</a>
+          <a href="#categorias" class="btn-secondary">Ver Categorias</a>
         </div>
       </div>
 
-      <a href="https://mpago.la/15WpJsr" target="_blank" class="btn">
-        ACESSO VITALÍCIO
-      </a>
-
-      <div class="delivery">
-        ✅ Entrega imediata após o pagamento
+      <div>
+        <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop" alt="Marketplace">
       </div>
-
-      <div class="counter">
-        🔥 +532 clientes atendidos
-      </div>
-
     </div>
+  </section>
 
-    <div class="hero-image">
+# HTML Atualizado — BuscaOferta
 
-      <div class="card">
+Substitua a seção antiga de categorias + produtos pelo código abaixo:
 
-        <div class="software-grid">
+```html
+<section class="categories" id="categorias">
+  <div class="container">
+    <h2 class="section-title">Categorias</h2>
 
-          <div class="software">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" width="55">
-            <h3>Photoshop</h3>
+    <div class="category-grid">
+      <div class="category-card">Notebook</div>
+      <div class="category-card">Computador</div>
+      <div class="category-card">Monitor</div>
+      <div class="category-card">Hardware</div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="produtos">
+  <div class="container">
+    <h2 class="section-title">Produtos em Destaque</h2>
+
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<script>
+  const produtos = [
+    {
+      nome: 'Computador Gamer Intel Core i7 16GB SSD 512GB Monitor 19" Kit Strong Tech',
+      preco: 'R$ 1.868',
+      categoria: 'Computador',
+      imagem: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://meli.la/2NhixEq'
+    },
+
+    {
+      nome: 'Notebook Asus Vivobook 15 X1504va Intel Core i5 1334U 8GB RAM 512GB SSD',
+      preco: 'R$ 3.078',
+      categoria: 'Notebook',
+      imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_874192-MLA99597035710_122025-F.webp',
+      link: 'https://meli.la/1PEsqeY'
+    },
+
+    {
+      nome: 'Computador Completo Intel Core i5 16GB SSD 512GB Monitor 20"',
+      preco: 'R$ 1.635',
+      categoria: 'Computador',
+      imagem: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://meli.la/2i32B5x'
+    },
+
+    {
+      nome: 'Placa-mãe Asus AMD AM4 B550M-PLUS TUF Gaming',
+      preco: 'R$ 797',
+      categoria: 'Hardware',
+      imagem: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://meli.la/1fAiqeS'
+    },
+
+    {
+      nome: 'PC Computador Completo Intel i5 16GB SSD 480GB Monitor 19',
+      preco: 'R$ 1.483',
+      categoria: 'Computador',
+      imagem: 'https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://meli.la/2fkwFCJ'
+    },
+
+    {
+      nome: 'Monitor LG UltraGear 24" Full HD 144Hz 1ms',
+      preco: 'R$ 679',
+      categoria: 'Monitor',
+      imagem: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://meli.la/1JtZZra'
+    },
+
+    {
+      nome: 'Monitor AOC 21.5" 120Hz 1ms Gaming HDMI',
+      preco: 'R$ 469',
+      categoria: 'Monitor',
+      imagem: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://meli.la/2jixAm5'
+    },
+
+    {
+      nome: 'Placa Mãe TGT H61-T DDR3 LGA1155',
+      preco: 'R$ 127',
+      categoria: 'Hardware',
+      imagem: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=1200&auto=format&fit=crop',
+      link: 'https://meli.la/1KinEKC'
+    }
+  ];
+
+  const productGrid = document.getElementById("productGrid");
+  const searchInput = document.querySelector(".search-box input");
+
+  function renderizarProdutos(lista) {
+    productGrid.innerHTML = "";
+
+    lista.forEach(produto => {
+      productGrid.innerHTML += `
+        <div class="product-card">
+          <img src="${produto.imagem}" alt="${produto.nome}">
+
+          <div class="product-info">
+            <h3>${produto.nome}</h3>
+
+            <span class="price">${produto.preco}</span>
+
+            <a href="${produto.link}" target="_blank" class="offer-btn">
+              Ver Oferta
+            </a>
           </div>
-
-          <div class="software">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968525.png" width="55">
-            <h3>Premiere</h3>
-          </div>
-
-          <div class="software">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968428.png" width="55">
-            <h3>After Effects</h3>
-          </div>
-
-          <div class="software">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968472.png" width="55">
-            <h3>Illustrator</h3>
-          </div>
-
-          <div class="software">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968514.png" width="55">
-            <h3>Lightroom</h3>
-          </div>
-
-          <div class="software">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg" width="55">
-            <h3>Adobe XD</h3>
-          </div>
-
-          <div class="software">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" width="55">
-            <h3>InDesign</h3>
-          </div>
-
-          <div class="software">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Adobe_Audition_CC_icon_%282020%29.svg/960px-Adobe_Audition_CC_icon_%282020%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20200616120744" width="55">
-            <h3>Audition</h3>
-          </div>
-
         </div>
+      `;
+    });
+  }
+
+  renderizarProdutos(produtos);
+
+  searchInput.addEventListener("input", () => {
+    const valor = searchInput.value.toLowerCase();
+
+    const filtrados = produtos.filter(produto =>
+      produto.nome.toLowerCase().includes(valor) ||
+      produto.categoria.toLowerCase().includes(valor)
+    );
+
+    renderizarProdutos(filtrados);
+  });
+
+  const categorias = document.querySelectorAll(".category-card");
+
+  categorias.forEach(categoria => {
+    categoria.addEventListener("click", () => {
+      const texto = categoria.innerText.toLowerCase();
+
+      const filtrados = produtos.filter(produto =>
+        produto.categoria.toLowerCase().includes(texto)
+      );
+
+      renderizarProdutos(filtrados);
+    });
+  });
+</script>
+```
+
+Agora:
+
+* A busca funciona em tempo real
+* Os produtos são gerados automaticamente
+* As categorias filtram corretamente
+* Seus links do Mercado Livre já estão aplicados
+* O código ficou muito mais limpo e profissional
+
 
       </div>
+    </div>
+  </section>
 
-      <img
-      class="mockup"
-      src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop"
-      alt="Mockup"
-      />
+  <section class="benefits">
+    <div class="container benefits-grid">
+
+      <div class="benefit-card">
+        <h3>Pesquisa Rápida</h3>
+        <p>
+          Encontre qualquer produto em segundos usando nossa busca inteligente.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Ofertas Reais</h3>
+        <p>
+          Descubra promoções atualizadas diariamente com os melhores preços.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Compra Segura</h3>
+        <p>
+          Você é redirecionado para o Mercado Livre com total segurança.
+        </p>
+      </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>
-        O Que Você Vai Receber
-      </h2>
+  <section class="newsletter">
+    <div class="container">
+      <h2>Receba ofertas exclusivas</h2>
 
       <p>
-        Um pacote completo criado para quem quer produzir conteúdos profissionais,
-        economizar tempo e elevar a qualidade dos projetos.
-      </p>
-    </div>
-
-    <div class="benefits">
-
-      <div class="benefit">
-        <h3>
-          ⚡ Acesso Ilimitado
-        </h3>
-
-        <p>
-          Instalação rápida e fácil dos softwares mais usados por profissionais.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <h3>
-          🔥 Efeitos Profissionais
-        </h3>
-
-        <p>
-          Transforme suas edições com efeitos cinematográficos e presets profissionais.
-        </p>
-      </div>
-
-      <div class="benefit">
-        <h3>
-          🚀 Versão Atualizada
-        </h3>
-
-        <p>
-          Últimas versões dos softwares incluídas no pacote.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-<h2>O Que Está Incluso</h2>
-
-<p>
-Tudo que você precisa para editar vídeos, imagens e criar conteúdos profissionais.
-</p>
-</div>
-
-<div class="includes">
-
-<div class="include-item">
-<i class="fa-solid fa-video"></i>
-<span>Premiere Pro</span>
-</div>
-
-<div class="include-item">
-<i class="fa-solid fa-image"></i>
-<span>Photoshop</span>
-</div>
-
-<div class="include-item">
-<i class="fa-solid fa-wand-magic-sparkles"></i>
-<span>After Effects</span>
-</div>
-
-<div class="include-item">
-<i class="fa-solid fa-pen-ruler"></i>
-<span>Illustrator</span>
-</div>
-
-<div class="include-item">
-<i class="fa-solid fa-camera"></i>
-<span>Lightroom</span>
-</div>
-
-<div class="include-item">
-<i class="fa-solid fa-layer-group"></i>
-<span>Plugins e Efeitos</span>
-</div>
-
-<div class="include-item">
-<i class="fa-solid fa-film"></i>
-<span>Transições Cinematográficas</span>
-</div>
-
-<div class="include-item">
-<i class="fa-solid fa-download"></i>
-<span>Acesso Vitalício</span>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-<h2>Quem Comprou Recomenda</h2>
-
-<p>
-Clientes satisfeitos utilizando o pack profissional.
-</p>
-</div>
-
-<div class="testimonials">
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>
-"Instalei tudo muito rápido e os programas funcionaram perfeitamente."
-</p>
-<b>— Lucas M.</b>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>
-"Valeu muito a pena pelo preço. Uso os programas todos os dias."
-</p>
-<b>— Amanda R.</b>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>
-"Entrega imediata e suporte excelente."
-</p>
-<b>— Gabriel S.</b>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-<h2>Perguntas Frequentes</h2>
-</div>
-
-<div class="faq">
-
-<div class="question">
-<h3>Como recebo os programas?</h3>
-<p>
-Você recebe imediatamente após o pagamento.
-</p>
-</div>
-
-<div class="question">
-<h3>O acesso é vitalício?</h3>
-<p>
-Sim. Você paga apenas uma vez e o acesso é permanente.
-</p>
-</div>
-
-<div class="question">
-<h3>Funciona no Windows?</h3>
-<p>
-Sim, compatível com Windows.
-</p>
-</div>
-
-<div class="question">
-<h3>Preciso esperar aprovação?</h3>
-<p>
-Não. O acesso é liberado rapidamente após confirmação do pagamento.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="cta">
-
-      <h2>
-        Garanta Seu Acesso Agora
-      </h2>
-
-      <p>
-        Oferta especial por tempo limitado. Acesse imediatamente
-        após a compra e comece a criar conteúdos profissionais hoje mesmo.
+        Cadastre-se e receba promoções diariamente.
       </p>
 
-      <a href="https://mpago.la/15WpJsr" target="_blank" class="btn">
-        COMPRAR POR R$29,90
-      </a>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Digite seu e-mail">
+        <button>Cadastrar</button>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <h2>BuscaOferta</h2>
+
+        <p>
+          Plataforma inteligente para pesquisa de produtos e ofertas online.
+        </p>
+      </div>
+
+      <div>
+        <h3>Links</h3>
+
+        <a href="#">Início</a><br>
+        <a href="#">Categorias</a><br>
+        <a href="#">Ofertas</a><br>
+        <a href="#">Contato</a>
+      </div>
     </div>
 
-  </div>
-
-</section>
-
-<footer class="footer-modern">
-
-<h3>CreativePack</h3>
-
-<p>
-© 2026 Todos os direitos reservados
-</p>
-
-<p>
-📩 Suporte: plashfire10@gmail.com
-</p>
-
-<p>
-⚡ Entrega digital imediata
-</p>
-
-<p>
-🔒 Ambiente seguro
-</p>
-
-</footer>
+    <div class="copyright">
+      © 2026 BuscaOferta - Todos os direitos reservados.
+    </div>
+  </footer>
 
 </body>
 </html>
-```
