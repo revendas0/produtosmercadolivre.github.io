@@ -12,159 +12,232 @@
     rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
 
-    body {
-      background: #09090b;
-      color: white;
-    }
+  body {
+    background: #0f0f10;
+    color: white;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    .container {
-      width: 90%;
-      max-width: 1300px;
-      margin: auto;
-    }
+  .container {
+    width: 90%;
+    max-width: 1350px;
+    margin: auto;
+  }
 
-    header {
-      background: #111111;
-      border-bottom: 1px solid #27272a;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+  /* HEADER */
 
+  header {
+    background: #151518;
+    border-bottom: 1px solid #2d2d31;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    flex-wrap: wrap;
+  }
+
+  .logo h1 {
+    color: #facc15;
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .logo p {
+    color: #a1a1aa;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  /* SEARCH */
+
+  .search-box {
+    flex: 1;
+    max-width: 760px;
+    display: flex;
+    background: #1c1c20;
+    border: 1px solid #2f2f35;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 56px;
+  }
+
+  .search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0 20px;
+    font-size: 1rem;
+  }
+
+  .search-box input::placeholder {
+    color: #71717a;
+  }
+
+  .search-box button {
+    background: #facc15;
+    color: black;
+    border: none;
+    width: 140px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.95rem;
+  }
+
+  .search-box button:hover {
+    background: #fde047;
+  }
+
+  /* SECTION */
+
+  .products {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    font-weight: 800;
+    color: white;
+  }
+
+  /* GRID */
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px;
+  }
+
+  /* CARD */
+
+  .product-card {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: 0.25s ease;
+    position: relative;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    border-color: #3f3f46;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  /* IMAGE */
+
+  .product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    background: white;
+    padding: 20px;
+  }
+
+  /* INFO */
+
+  .product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .product-info h3 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: #e4e4e7;
+    font-weight: 500;
+
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    min-height: 48px;
+  }
+
+  /* PRICE */
+
+  .price {
+    color: #facc15;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+
+  /* BUTTON */
+
+  .offer-btn {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    background: #facc15;
+    color: #000;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: 0.2s;
+    font-size: 0.95rem;
+  }
+
+  .offer-btn:hover {
+    background: #fde047;
+    transform: scale(1.01);
+  }
+
+  /* RESPONSIVO */
+
+  @media(max-width: 768px) {
     .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 20px 0;
-      flex-wrap: wrap;
-    }
-
-    .logo h1 {
-      color: #facc15;
-      font-size: 2rem;
-      font-weight: 900;
-    }
-
-    .logo p {
-      color: #a1a1aa;
-      font-size: 0.9rem;
+      flex-direction: column;
+      align-items: stretch;
     }
 
     .search-box {
-      flex: 1;
-      max-width: 700px;
-      display: flex;
-      background: #18181b;
-      border: 1px solid #27272a;
-      border-radius: 18px;
-      overflow: hidden;
+      max-width: 100%;
     }
 
-    .search-box input {
-      flex: 1;
-      background: transparent;
-      border: none;
-      outline: none;
-      color: white;
-      padding: 18px;
-      font-size: 1rem;
-    }
-
-    .search-box button {
-      background: #facc15;
-      color: black;
-      border: none;
-      padding: 18px 30px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .products {
-      padding: 80px 0;
-    }
-
-    /* 🔥 GRID AJUSTADO */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    /* 🔥 CARD FLEX PARA ALINHAR TUDO */
-    .product-card {
-      background: #111111;
-      border: 1px solid #27272a;
-      border-radius: 30px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-8px);
-      border-color: #facc15;
-    }
-
-    /* 🔥 IMAGEM MENOR E PROPORCIONAL */
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      background: white;
-    }
-
-    /* 🔥 CONTEÚDO FLEX */
-    .product-info {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .product-info h3 {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      color: #facc15;
-      font-size: 1.5rem;
-      font-weight: 900;
-      margin-bottom: 15px;
-    }
-
-    /* 🔥 BOTÃO ALINHADO SEMPRE EM BAIXO */
-    .offer-btn {
-      margin-top: auto;
-      display: block;
+    .logo {
       text-align: center;
-      background: #facc15;
-      color: black;
-      padding: 14px;
-      border-radius: 18px;
-      font-weight: 700;
-      transition: 0.3s;
     }
 
-    .offer-btn:hover {
-      background: #fde047;
-      transform: scale(1.02);
+    .product-card img {
+      height: 200px;
     }
-  </style>
+
+    .section-title {
+      font-size: 1.7rem;
+    }
+  }
+</style>
 </head>
 
 <body>
@@ -513,18 +586,90 @@
       },
 
       {
-  nome: 'Balança Digital De Precisão 10kg Davely Cook Cozinha Para Uso Domestico E Profissional Fitness Ideal Para Dietas Treinos Alimentos Confeitaria Nutrição Branco',
-  preco: 'R$ 18',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_977172-MLA107049793514_022026-F.webp',
-  link: 'https://meli.la/1Ja2cNP'
-},
+        nome: 'Balança Digital De Precisão 10kg Davely Cook Cozinha Para Uso Domestico E Profissional Fitness Ideal Para Dietas Treinos Alimentos Confeitaria Nutrição Branco',
+        preco: 'R$ 18',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_977172-MLA107049793514_022026-F.webp',
+        link: 'https://meli.la/1Ja2cNP'
+      },
 
-{
-  nome: 'Balança Digital Bioimpedância Bluetooth Corporal Aparelho Alta Capacidade App para Android e para IOS Cor Preto Balança De Banheiro Academia - RHEAD RED HIGH END STUDIOS',
-  preco: 'R$ 29',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_907836-MLA110261906562_052026-F.webp',
-  link: 'https://meli.la/2qsu9TR'
-},
+      {
+        nome: 'Balança Digital Bioimpedância Bluetooth Corporal Aparelho Alta Capacidade App para Android e para IOS Cor Preto Balança De Banheiro Academia - RHEAD RED HIGH END STUDIOS',
+        preco: 'R$ 29',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_907836-MLA110261906562_052026-F.webp',
+        link: 'https://meli.la/2qsu9TR'
+      },
+
+      {
+        nome: 'Console Playstation®5 Slim Disk - Pacote Astro Bot E Gran Turismo 7 Branco',
+        preco: 'R$ 4.230',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_945456-MLA99456386724_112025-F.webp',
+        link: 'https://meli.la/1K3u9P9'
+      },
+
+      {
+        nome: 'Kit Com 48 Pacotes de Figurinhas Panini Para o Álbum Copa do Mundo FIFA 2026',
+        preco: 'R$ 321',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_979288-MLA109171693698_042026-F.webp',
+        link: 'https://meli.la/1xKv2eg'
+      },
+
+      {
+        nome: 'Álbum De Figurinhas Colecionáveis Copa Do Mundo Fifa 2026',
+        preco: 'R$ 39',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_732835-MLB110559499954_052026-F.webp',
+        link: 'https://meli.la/2ZLUhtb'
+      },
+
+      {
+        nome: 'Vittak Lixeira Inox C/ Pedal E Balde Cesto Lixo Removível 12l Banheiro Cozinha',
+        preco: 'R$ 78',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_970713-MLA110584208884_052026-F.webp',
+        link: 'https://meli.la/2b7Liri'
+      },
+
+      {
+        nome: 'Adaptador Receptor Bluetooth Usb Carro Musica Chamada S/fio Hrebos',
+        preco: 'R$ 34',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_866885-MLA99927000353_112025-F.webp',
+        link: 'https://meli.la/2gfj6BW'
+      },
+
+      {
+        nome: 'Aspirador De Pó Vertical Wap Power Speed Max 1600w',
+        preco: 'R$ 244',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_773776-MLA106648864819_022026-F.webp',
+        link: 'https://meli.la/2nhmXSG'
+      },
+
+      {
+        nome: 'Escada Alumínio 4 Degraus MOR Prateado/Azul',
+        preco: 'R$ 199',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_985486-MLA96868217701_102025-F.webp',
+        link: 'https://meli.la/2pmwuDH'
+      },
+
+      {
+        nome: 'Pasta Termica Seringa 3.0g Thermal Cold 7.5w/k Authentic Silver',
+        preco: 'R$ 20',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_947884-MLA108302766245_032026-F.webp',
+        link: 'https://meli.la/2p6dyFY'
+      },
+
+      {
+        nome: 'Cafeteira Elétrica Electrolux Jarra vidro, acabamento inox filtro Permanente Removível Sistema Corta Pingos Capacidade 15 xicaras 600ml ECM10',
+        preco: 'R$ 109',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_923263-MLA99474168604_112025-F.webp',
+        link: 'https://meli.la/2kqe4Sb'
+      },
+
+      {
+        nome: 'Campainha Sem Fio Intelbras CIB 101 Preta',
+        preco: 'R$ 66',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_632697-MLA100063596197_122025-F.webp',
+        link: 'https://meli.la/1XAhNw4'
+      },
+
+
 
       {
         nome: 'Monitor LG UltraGear 24 144Hz',
