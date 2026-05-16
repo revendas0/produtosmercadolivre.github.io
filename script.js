@@ -63,13 +63,6 @@ const produtos = [
     },
 
     {
-        nome: 'Samsung Galaxy A56 5g 128gb 8gb Ram Verde',
-        preco: 'R$ 2.225',
-        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_641150-MLA94466176565_102025-F.webp',
-        link: 'https://meli.la/345AEbg'
-    },
-
-    {
         nome: 'Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De 50+12+8, Tela Grande De 6.7 Azul Marinho',
         preco: 'R$ 2.616',
         imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_993303-MLA96666133268_112025-F.webp',
@@ -665,13 +658,6 @@ const produtos = [
     },
 
     {
-        nome: 'Celular Samsung Galaxy A07 128gb Preto',
-        preco: 'R$ 589',
-        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_678247-MLA99491753898_112025-F.webp',
-        link: 'https://meli.la/2Jamvub'
-    },
-
-    {
         nome: 'Jogo Jacaré Mordida Crocodilo Dentista BDivertido Pegadinha',
         preco: 'R$ 19',
         imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_984527-MLA99567099290_122025-F.webp',
@@ -883,350 +869,341 @@ const produtos = [
         link: 'https://meli.la/1xdNZHf'
     },
 
-{
-  nome: 'Samsung Galax A23 5G Dual Sim 128gb 4gb Ram Cor Branco',
-  preco: 'R$ 1.745',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_802008-MLA99940512841_112025-F.webp',
-  link: 'https://meli.la/1eHuwAf'
-},
+    {
+        nome: 'Samsung Galax A23 5G Dual Sim 128gb 4gb Ram Cor Branco',
+        preco: 'R$ 1.745',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_802008-MLA99940512841_112025-F.webp',
+        link: 'https://meli.la/1eHuwAf'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A23 6.6 128gb 4gb Ram Azul',
-  preco: 'R$ 1.354',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_761422-MLA93085347108_092025-F.webp',
-  link: 'https://meli.la/2FTkFCu'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A23 6.6 128gb 4gb Ram Azul',
+        preco: 'R$ 1.354',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_761422-MLA93085347108_092025-F.webp',
+        link: 'https://meli.la/2FTkFCu'
+    },
 
-{
-  nome: 'Samsung Galaxy A25 5G Dual SIM 128Gb Azul Escuro 6Gb Ram',
-  preco: 'R$ 1.657',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_667838-MLA99562178066_122025-F.webp',
-  link: 'https://meli.la/2E2CA4N'
-},
+    {
+        nome: 'Samsung Galaxy A25 5G Dual SIM 128Gb Azul Escuro 6Gb Ram',
+        preco: 'R$ 1.657',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_667838-MLA99562178066_122025-F.webp',
+        link: 'https://meli.la/2E2CA4N'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A25 5G 256GB 8GB Ram Dual SIM Android 14 Azul-Escuro 6,5 (Novo com caixa aberta)',
-  preco: 'R$ 1.429',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_936288-MLA99870057759_112025-F.webp',
-  link: 'https://meli.la/1ZLZAXs'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A25 5G 256GB 8GB Ram Dual SIM Android 14 Azul-Escuro 6,5 (Novo com caixa aberta)',
+        preco: 'R$ 1.429',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_936288-MLA99870057759_112025-F.webp',
+        link: 'https://meli.la/1ZLZAXs'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tripla De Até 50mp Selfie De 12mp Ip67 Super Amoled 6.7 Nfc Recursos Ai Android E Segurança Snapdragon - Preto',
-  preco: 'R$ 1.419',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_705075-MLA99943632917_112025-F.webp',
-  link: 'https://meli.la/1p6vrke'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tripla De Até 50mp Selfie De 12mp Ip67 Super Amoled 6.7 Nfc Recursos Ai Android E Segurança Snapdragon - Preto',
+        preco: 'R$ 1.419',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_705075-MLA99943632917_112025-F.webp',
+        link: 'https://meli.la/1p6vrke'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A26 5g 256gb, 8gb Ram, Câmera De 50mp, Ip67, Tela Super Amoled 6.7 , Nfc - Preto',
-  preco: 'R$ 1.590',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_792472-MLA100025549859_122025-F.webp',
-  link: 'https://meli.la/2a98aaC'
-},
+    {
+        nome: 'Celular Samsung Galaxy A26 5g 256gb, 8gb Ram, Câmera De 50mp, Ip67, Tela Super Amoled 6.7 , Nfc - Preto',
+        preco: 'R$ 1.590',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_792472-MLA100025549859_122025-F.webp',
+        link: 'https://meli.la/2a98aaC'
+    },
 
-{
-  nome: 'Samsung Galaxy A26 Preto',
-  preco: 'R$ 1.989',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_772705-MLA99972432861_112025-F.webp',
-  link: 'https://meli.la/1XDZqj5'
-},
+    {
+        nome: 'Samsung Galaxy A26 Preto',
+        preco: 'R$ 1.989',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_772705-MLA99972432861_112025-F.webp',
+        link: 'https://meli.la/1XDZqj5'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A26 5g 256gb, 8gb Ram, Câmera De 50mp, Ip67, Tela Super Amoled 6.7 , Nfc - Preto (Novo com caixa aberta)',
-  preco: 'R$ 1.891',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_792472-MLA100025549859_122025-F.webp',
-  link: 'https://meli.la/27AHx2X'
-},
+    {
+        nome: 'Celular Samsung Galaxy A26 5g 256gb, 8gb Ram, Câmera De 50mp, Ip67, Tela Super Amoled 6.7 , Nfc - Preto (Novo com caixa aberta)',
+        preco: 'R$ 1.891',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_792472-MLA100025549859_122025-F.webp',
+        link: 'https://meli.la/27AHx2X'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A31 6.4 128gb 4gb Ram Preto',
-  preco: 'R$ 1.219',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_845189-MLA96125164715_102025-F.webp',
-  link: 'https://meli.la/2iBbJyi'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A31 6.4 128gb 4gb Ram Preto',
+        preco: 'R$ 1.219',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_845189-MLA96125164715_102025-F.webp',
+        link: 'https://meli.la/2iBbJyi'
+    },
 
-{
-  nome: 'Samsung Galaxy A32 Dual SIM 128 GB preto 4 GB RAM',
-  preco: 'R$ 1.499',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_845226-MLA99574342814_122025-F.webp',
-  link: 'https://meli.la/2uSuiXY'
-},
+    {
+        nome: 'Samsung Galaxy A32 Dual SIM 128 GB preto 4 GB RAM',
+        preco: 'R$ 1.499',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_845226-MLA99574342814_122025-F.webp',
+        link: 'https://meli.la/2uSuiXY'
+    },
 
-{
-  nome: 'Samsung Galaxy A32 4gb 128gb Violeta 5g',
-  preco: 'R$ 1.599',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_680621-MLU69146534425_042023-F.webp',
-  link: 'https://meli.la/2NZqHYW'
-},
+    {
+        nome: 'Samsung Galaxy A32 4gb 128gb Violeta 5g',
+        preco: 'R$ 1.599',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_680621-MLU69146534425_042023-F.webp',
+        link: 'https://meli.la/2NZqHYW'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A33 5g Tela 6.4 128gb 6gb Ram Azul',
-  preco: 'R$ 1.399',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_986055-MLA93495119963_092025-F.webp',
-  link: 'https://meli.la/1UMUREC'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A33 5g Tela 6.4 128gb 6gb Ram Azul',
+        preco: 'R$ 1.399',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_986055-MLA93495119963_092025-F.webp',
+        link: 'https://meli.la/1UMUREC'
+    },
 
-{
-  nome: 'Smartphone Galaxy A33 5g 6.4 128gb 6gb Ram Preto Samsung (Novo com caixa aberta)',
-  preco: 'R$ 1.357',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_627161-MLA99459845532_112025-F.webp',
-  link: 'https://meli.la/11jg4aV'
-},
+    {
+        nome: 'Smartphone Galaxy A33 5g 6.4 128gb 6gb Ram Preto Samsung (Novo com caixa aberta)',
+        preco: 'R$ 1.357',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_627161-MLA99459845532_112025-F.webp',
+        link: 'https://meli.la/11jg4aV'
+    },
 
-{
-  nome: 'Samsung Galaxy A33 5G 128 GB preto 6 GB RAM (Novo com caixa aberta)',
-  preco: 'R$ 1.569',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_979874-MLA51000508349_082022-F.webp',
-  link: 'https://meli.la/1FgzbHn'
-},
+    {
+        nome: 'Samsung Galaxy A33 5G 128 GB preto 6 GB RAM (Novo com caixa aberta)',
+        preco: 'R$ 1.569',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_979874-MLA51000508349_082022-F.webp',
+        link: 'https://meli.la/1FgzbHn'
+    },
 
-{
-  nome: 'Samsung Galaxy A34 Dual Chip 5G 128GB Preto 6GB RAM',
-  preco: 'R$ 1.873',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_841874-MLA100010456593_122025-F.webp',
-  link: 'https://meli.la/1BdBAH3'
-},
+    {
+        nome: 'Samsung Galaxy A34 Dual Chip 5G 128GB Preto 6GB RAM',
+        preco: 'R$ 1.873',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_841874-MLA100010456593_122025-F.webp',
+        link: 'https://meli.la/1BdBAH3'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A37 5g 256gb, 8gb Ram, Câmera 50mp Verde',
-  preco: 'R$ 2.776',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_832338-MLA109626279958_042026-F.webp',
-  link: 'https://meli.la/1xzJew5'
-},
+    {
+        nome: 'Celular Samsung Galaxy A37 5g 256gb, 8gb Ram, Câmera 50mp Verde',
+        preco: 'R$ 2.776',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_832338-MLA109626279958_042026-F.webp',
+        link: 'https://meli.la/1xzJew5'
+    },
 
-{
-  nome: 'Samsung Galaxy A35 5G 128GB Azul-escuro 6GB RAM (Novo com caixa aberta)',
-  preco: 'R$ 1.579',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_810090-MLA99502164180_112025-F.webp',
-  link: 'https://meli.la/2FGMwBW'
-},
+    {
+        nome: 'Samsung Galaxy A35 5G 128GB Azul-escuro 6GB RAM (Novo com caixa aberta)',
+        preco: 'R$ 1.579',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_810090-MLA99502164180_112025-F.webp',
+        link: 'https://meli.la/2FGMwBW'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A35 5G 128GB 6GB RAM Câmeras Traseiras 50.0 MP + 8.0 MP + 5.0 MP Selfie 13.0 MP Azul EscuroEscuro',
-  preco: 'R$ 1.899',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_913486-MLA99985168635_112025-F.webp',
-  link: 'https://meli.la/2pQ9i2m'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A35 5G 128GB 6GB RAM Câmeras Traseiras 50.0 MP + 8.0 MP + 5.0 MP Selfie 13.0 MP Azul EscuroEscuro',
+        preco: 'R$ 1.899',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_913486-MLA99985168635_112025-F.webp',
+        link: 'https://meli.la/2pQ9i2m'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A37 5g 128gb, 6gb Ram, Câmera 50mp Preto',
-  preco: 'R$ 2.443',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_684352-MLA110556027739_042026-F.webp',
-  link: 'https://meli.la/2mPD869'
-},
+    {
+        nome: 'Celular Samsung Galaxy A37 5g 128gb, 6gb Ram, Câmera 50mp Preto',
+        preco: 'R$ 2.443',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_684352-MLA110556027739_042026-F.webp',
+        link: 'https://meli.la/2mPD869'
+    },
 
-{
-  nome: 'Samsung Galaxy A35 5G Dual SIM 256GB Azul Escuro 8 GB RAM',
-  preco: 'R$ 2.106',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_750326-MLA99872670113_112025-F.webp',
-  link: 'https://meli.la/1QHz92T'
-},
+    {
+        nome: 'Samsung Galaxy A35 5G Dual SIM 256GB Azul Escuro 8 GB RAM',
+        preco: 'R$ 2.106',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_750326-MLA99872670113_112025-F.webp',
+        link: 'https://meli.la/1QHz92T'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A36 5g 128gb 6gb Ram Câmera Tripla De Até 50mp Selfie De 12mp Ip67 Super Amoled 6.7 Nfc Recursos Ai Android E Segurança Snapdragon - Preto',
-  preco: 'R$ 1.419',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_705075-MLA99943632917_112025-F.webp',
-  link: 'https://meli.la/1p6vrke'
-},
+    {
+        nome: 'Celular Samsung Galaxy A36 5g 256gb 8gb Ram Branco',
+        preco: 'R$ 1.699',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_697102-MLA99477666220_112025-F.webp',
+        link: 'https://meli.la/1XQSMgz'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A36 5g 256gb 8gb Ram Branco',
-  preco: 'R$ 1.699',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_697102-MLA99477666220_112025-F.webp',
-  link: 'https://meli.la/1XQSMgz'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A36 5g 256gb, 8gb Ram, Recursos Ai',
+        preco: 'R$ 1.698',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_604003-MLA82943652149_032025-F.webp',
+        link: 'https://meli.la/1Xe8SRt'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A36 5g 256gb, 8gb Ram, Recursos Ai',
-  preco: 'R$ 1.698',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_604003-MLA82943652149_032025-F.webp',
-  link: 'https://meli.la/1Xe8SRt'
-},
+    {
+        nome: 'Samsung Galaxy A37 5g Verde 6gb 128gb',
+        preco: 'R$ 2.199',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_661201-MLB110805549536_052026-F.webp',
+        link: 'https://meli.la/32S756N'
+    },
 
-{
-  nome: 'Samsung Galaxy A37 5g Verde 6gb 128gb',
-  preco: 'R$ 2.199',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_661201-MLB110805549536_052026-F.webp',
-  link: 'https://meli.la/32S756N'
-},
+    {
+        nome: 'Samsung Galaxy A50 Dual SIM 64 GB preto 4 GB RAM',
+        preco: 'R$ 1.499',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_821218-MLA99959926011_112025-F.webp',
+        link: 'https://meli.la/2CeduhP'
+    },
 
-{
-  nome: 'Samsung Galaxy A50 Dual SIM 64 GB preto 4 GB RAM',
-  preco: 'R$ 1.499',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_821218-MLA99959926011_112025-F.webp',
-  link: 'https://meli.la/2CeduhP'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A51 Tela 6.5 128gb 4gb Ram Cinza',
+        preco: 'R$ 1.798',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_828315-MLA97023494054_112025-F.webp',
+        link: 'https://meli.la/2yRTpHr'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A51 Tela 6.5 128gb 4gb Ram Cinza',
-  preco: 'R$ 1.798',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_828315-MLA97023494054_112025-F.webp',
-  link: 'https://meli.la/2yRTpHr'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A52 Tela 6,5 128gb 6gb Ram Lilás (Novo com caixa aberta)',
+        preco: 'R$ 2.190',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_908128-MLA99924426765_112025-F.webp',
+        link: 'https://meli.la/1z6Erin'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A52 Tela 6,5 128gb 6gb Ram Lilás (Novo com caixa aberta)',
-  preco: 'R$ 2.190',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_908128-MLA99924426765_112025-F.webp',
-  link: 'https://meli.la/1z6Erin'
-},
+    {
+        nome: 'Smartphone Galaxy A53 5g 128 Gb 8gb Tela 6,5 Azul Samsung',
+        preco: 'R$ 1.799',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_867057-MLA95651217470_102025-F.webp',
+        link: 'https://meli.la/1dTGwCb'
+    },
 
-{
-  nome: 'Smartphone Galaxy A53 5g 128 Gb 8gb Tela 6,5 Azul Samsung',
-  preco: 'R$ 1.799',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_867057-MLA95651217470_102025-F.webp',
-  link: 'https://meli.la/1dTGwCb'
-},
+    {
+        nome: 'Samsung Galaxy A54 5G 256GB Preto 8GB RAM',
+        preco: 'R$ 2.599',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_735376-MLA99508600708_112025-F.webp',
+        link: 'https://meli.la/1MCtS8o'
+    },
 
-{
-  nome: 'Samsung Galaxy A54 5G 256GB Preto 8GB RAM',
-  preco: 'R$ 2.599',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_735376-MLA99508600708_112025-F.webp',
-  link: 'https://meli.la/1MCtS8o'
-},
+    {
+        nome: 'Samsung Galaxy A54 5g 128gb 8gb Ram Verde Lima',
+        preco: 'R$ 2.130',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_878188-MLA99917504809_112025-F.webp',
+        link: 'https://meli.la/19daagk'
+    },
 
-{
-  nome: 'Samsung Galaxy A54 5g 128gb 8gb Ram Verde Lima',
-  preco: 'R$ 2.130',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_878188-MLA99917504809_112025-F.webp',
-  link: 'https://meli.la/19daagk'
-},
+    {
+        nome: 'Samsung Galaxy A55 5g Dual Sim 128 Gb Azul-escuro 8 Gb Ram',
+        preco: 'R$ 2.244',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_764395-MLA100066474331_122025-F.webp',
+        link: 'https://meli.la/2LNFtAr'
+    },
 
-{
-  nome: 'Samsung Galaxy A55 5g Dual Sim 128 Gb Azul-escuro 8 Gb Ram',
-  preco: 'R$ 2.244',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_764395-MLA100066474331_122025-F.webp',
-  link: 'https://meli.la/2LNFtAr'
-},
+    {
+        nome: 'Celular Samsung Galaxy A55 5g 128gb, Câmera Tripla Tela 6.6 Cor Azul-celeste',
+        preco: 'R$ 2.299',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_742269-MLA99389746656_112025-F.webp',
+        link: 'https://meli.la/1Zt8ckV'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A55 5g 128gb, Câmera Tripla Tela 6.6 Cor Azul-celeste',
-  preco: 'R$ 2.299',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_742269-MLA99389746656_112025-F.webp',
-  link: 'https://meli.la/1Zt8ckV'
-},
+    {
+        nome: 'Samsung Galaxy A55 5G Dual SIM 256 GB Azul escuro 8 GB RAM',
+        preco: 'R$ 2.599',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_746001-MLA97557162377_112025-F.webp',
+        link: 'https://meli.la/2XAB72s'
+    },
 
-{
-  nome: 'Samsung Galaxy A55 5G Dual SIM 256 GB Azul escuro 8 GB RAM',
-  preco: 'R$ 2.599',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_746001-MLA97557162377_112025-F.webp',
-  link: 'https://meli.la/2XAB72s'
-},
+    {
+        nome: 'Samsung Galaxy A56 5g 128gb 8gb Ram Verde',
+        preco: 'R$ 2.225',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_641150-MLA94466176565_102025-F.webp',
+        link: 'https://meli.la/345AEbg'
+    },
 
-{
-  nome: 'Samsung Galaxy A56 5g 128gb 8gb Ram Verde',
-  preco: 'R$ 2.225',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_641150-MLA94466176565_102025-F.webp',
-  link: 'https://meli.la/345AEbg'
-},
+    {
+        nome: 'Celular Samsung Galaxy A56 5g 256gb 8gb Ram Cinza',
+        preco: 'R$ 2.274',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_927393-MLA100014745899_122025-F.webp',
+        link: 'https://meli.la/31PNt9a'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A56 5g 256gb 8gb Ram Cinza',
-  preco: 'R$ 2.274',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_927393-MLA100014745899_122025-F.webp',
-  link: 'https://meli.la/31PNt9a'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A56 5g Preto 256gb, 8gb Ram - Preto',
+        preco: 'R$ 2.653',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_693751-MLA97315678331_112025-F.webp',
+        link: 'https://meli.la/2DpJQwq'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A56 5g Preto 256gb, 8gb Ram - Preto',
-  preco: 'R$ 2.653',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_693751-MLA97315678331_112025-F.webp',
-  link: 'https://meli.la/2DpJQwq'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A56 5g 6.7 Pol Octa-core 256gb 8gb',
+        preco: 'R$ 2.639',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_686437-MLA106036861148_022026-F.webp',
+        link: 'https://meli.la/1ZNc6iN'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A56 5g 6.7 Pol Octa-core 256gb 8gb',
-  preco: 'R$ 2.639',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_686437-MLA106036861148_022026-F.webp',
-  link: 'https://meli.la/1ZNc6iN'
-},
+    {
+        nome: 'Samsung Galaxy A56 128gb Preto Excelente (Recondicionado)',
+        preco: 'R$ 1.859',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_923250-MLB98784062383_112025-F.webp',
+        link: 'https://meli.la/2Jvoa2s'
+    },
 
-{
-  nome: 'Samsung Galaxy A56 128gb Preto Excelente (Recondicionado)',
-  preco: 'R$ 1.859',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_923250-MLB98784062383_112025-F.webp',
-  link: 'https://meli.la/2Jvoa2s'
-},
+    {
+        nome: 'Celular Samsung Galaxy A57 5G 256GB, 8GB RAM, Câmera 50MP, IP68, Super AMOLED 6.7", Recursos AI - Cinza',
+        preco: 'R$ 2.979',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_872539-MLA109667912982_042026-F.webp',
+        link: 'https://meli.la/2HLJnxf'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A57 5G 256GB, 8GB RAM, Câmera 50MP, IP68, Super AMOLED 6.7", Recursos AI - Cinza',
-  preco: 'R$ 2.979',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_872539-MLA109667912982_042026-F.webp',
-  link: 'https://meli.la/2HLJnxf'
-},
+    {
+        nome: 'Celular Samsung Galaxy A57 5G 256GB, 8GB RAM, Câmera 50MP, IP68, Super AMOLED 6.7", Recursos AI - Azul Claro',
+        preco: 'R$ 3.110',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_987360-MLA109664859882_042026-F.webp',
+        link: 'https://meli.la/2pM3q2x'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A57 5G 256GB, 8GB RAM, Câmera 50MP, IP68, Super AMOLED 6.7", Recursos AI - Azul Claro',
-  preco: 'R$ 3.110',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_987360-MLA109664859882_042026-F.webp',
-  link: 'https://meli.la/2pM3q2x'
-},
+    {
+        nome: 'Galaxy A57 128gb Awesome Navy',
+        preco: 'R$ 2.777',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_638565-MLA111552421395_052026-F.webp',
+        link: 'https://meli.la/2DJhtvz'
+    },
 
-{
-  nome: 'Galaxy A57 128gb Awesome Navy',
-  preco: 'R$ 2.777',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_638565-MLA111552421395_052026-F.webp',
-  link: 'https://meli.la/2DJhtvz'
-},
+    {
+        nome: 'Celular Samsung Galaxy A57 5g 256gb 8gb Ram Cor Gray',
+        preco: 'R$ 2.799',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_807890-MLA109666789142_042026-F.webp',
+        link: 'https://meli.la/2MBAWiB'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A57 5g 256gb 8gb Ram Cor Gray',
-  preco: 'R$ 2.799',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_807890-MLA109666789142_042026-F.webp',
-  link: 'https://meli.la/2MBAWiB'
-},
+    {
+        nome: 'Celular Samsung Galaxy A57 5G 128GB, 8GB RAM, Câmera 50MP, IP68, Super AMOLED 6.7", Recursos AI - Lilás',
+        preco: 'R$ 2.776',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_763730-MLA109669126702_042026-F.webp',
+        link: 'https://meli.la/1RsQfoi'
+    },
 
-{
-  nome: 'Celular Samsung Galaxy A57 5G 128GB, 8GB RAM, Câmera 50MP, IP68, Super AMOLED 6.7", Recursos AI - Lilás',
-  preco: 'R$ 2.776',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_763730-MLA109669126702_042026-F.webp',
-  link: 'https://meli.la/1RsQfoi'
-},
+    {
+        nome: 'Samsung Galaxy A70 128gb Branco Bom - Trocafone - Usado (Recondicionado)',
+        preco: 'R$ 729',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_833064-MLB50683281845_072022-F.webp',
+        link: 'https://meli.la/11bHytt'
+    },
 
-{
-  nome: 'Samsung Galaxy A70 128gb Branco Bom - Trocafone - Usado (Recondicionado)',
-  preco: 'R$ 729',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_833064-MLB50683281845_072022-F.webp',
-  link: 'https://meli.la/11bHytt'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A71 Tela 6,7 128 Gb 6 Gb Ram Cinza',
+        preco: 'R$ 2.399',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_870512-MLA43071856400_082020-F.webp',
+        link: 'https://meli.la/1xvkJcb'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A71 Tela 6,7 128 Gb 6 Gb Ram Cinza',
-  preco: 'R$ 2.399',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_870512-MLA43071856400_082020-F.webp',
-  link: 'https://meli.la/1xvkJcb'
-},
+    {
+        nome: 'Smartphone Galaxy A72 6,7 128gb 6gb Ram Preto Samsung',
+        preco: 'R$ 2.899',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_712311-MLA95393963486_102025-F.webp',
+        link: 'https://meli.la/2kwyB7H'
+    },
 
-{
-  nome: 'Smartphone Galaxy A72 6,7 128gb 6gb Ram Preto Samsung',
-  preco: 'R$ 2.899',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_712311-MLA95393963486_102025-F.webp',
-  link: 'https://meli.la/2kwyB7H'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A72 6,7 128gb 6gb Ram Branco',
+        preco: 'R$ 3.399',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_897979-MLA96869072153_102025-F.webp',
+        link: 'https://meli.la/2qRCPMB'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A72 6,7 128gb 6gb Ram Branco',
-  preco: 'R$ 3.399',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_897979-MLA96869072153_102025-F.webp',
-  link: 'https://meli.la/2qRCPMB'
-},
+    {
+        nome: 'Smartphone Samsung Galaxy A73 5g, 8gb Ram, 128gb, Tela 6.7 Cor Branco (Novo com caixa aberta)',
+        preco: 'R$ 3.049',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_791706-MLA99935952649_112025-F.webp',
+        link: 'https://meli.la/1tscmYB'
+    },
 
-{
-  nome: 'Smartphone Samsung Galaxy A73 5g, 8gb Ram, 128gb, Tela 6.7 Cor Branco (Novo com caixa aberta)',
-  preco: 'R$ 3.049',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_791706-MLA99935952649_112025-F.webp',
-  link: 'https://meli.la/1tscmYB'
-},
-
-{
-  nome: 'Samsung Galaxy A50 64 GB preto 4 GB RAM',
-  preco: 'R$ 1.698',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_955410-MLA31847950359_082019-F.webp',
-  link: 'https://meli.la/33c13bH'
-},
-
-
+    {
+        nome: 'Samsung Galaxy A50 64 GB preto 4 GB RAM',
+        preco: 'R$ 1.698',
+        imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_955410-MLA31847950359_082019-F.webp',
+        link: 'https://meli.la/33c13bH'
+    },
 
     {
         nome: 'Monitor LG UltraGear 24 144Hz',
