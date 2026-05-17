@@ -1213,22 +1213,11 @@ const produtos = [
     },
 
     {
-  nome: 'Carregador Portátil 20000 Turbo 22.5w Power Bank Premium Universal Rápido Para Samsung iPhone Xiaomi Motorola Celular Smartwatch Tablet Davely Preto',
-  preco: 'R$ 79',
-  imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_761042-MLA109148167556_042026-F.webp',
-  link: 'https://meli.la/1ANc4DG'
-},
-
-    {
         nome: 'Monitor LG UltraGear 24 144Hz',
         preco: 'R$ 3.699',
         imagem: 'https://http2.mlstatic.com/D_NQ_NP_2X_678582-MLA99572282914_122025-F.webp',
         link: 'https://meli.la/1ErojXP'
     }
-
-
-
-
 
 ];
 
