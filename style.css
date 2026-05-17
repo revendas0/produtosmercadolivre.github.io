@@ -304,6 +304,8 @@ header {
 
 /* RESPONSIVO */
 
+/* RESPONSIVO */
+
 @media(max-width: 768px) {
 
   .header-content {
@@ -313,23 +315,82 @@ header {
 
   .search-box {
     max-width: 100%;
+    height: 50px;
+  }
+
+  .search-box input {
+    font-size: 0.9rem;
+    padding: 0 14px;
+  }
+
+  .search-box button {
+    width: 110px;
+    font-size: 0.82rem;
   }
 
   .logo {
     text-align: center;
   }
 
-  .product-card img {
-    height: 190px;
-    padding: 16px;
+  .logo h1 {
+    font-size: 1.9rem;
   }
 
+  .logo p {
+    font-size: 0.8rem;
+  }
+
+  /* 2 PRODUTOS POR LINHA */
+
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* CARD */
+
+  .product-card {
+    border-radius: 16px;
+  }
+
+  /* IMAGEM */
+
+  .product-card img {
+    height: 150px;
+    padding: 12px;
+  }
+
+  /* INFO */
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 0.78rem;
+    line-height: 1.35;
+
+    min-height: 42px;
+
+    margin-bottom: 10px;
+  }
+
+  /* PREÇO */
+
+  .price {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  /* BOTÃO */
+
+  .offer-btn {
+    padding: 10px;
+    font-size: 0.78rem;
+    border-radius: 10px;
   }
 
   .section-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
