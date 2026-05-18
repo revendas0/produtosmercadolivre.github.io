@@ -5,6 +5,13 @@ const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
 // =========================
+// CONTROLE DE PAGINAÇÃO
+// =========================
+let pagina = 1;
+const porPagina = 50;
+let listaAtual = [];
+
+// =========================
 // CARREGAR PRODUTOS DO JSON
 // =========================
 async function carregarProdutos() {
@@ -12,7 +19,10 @@ async function carregarProdutos() {
         const response = await fetch("./produtos.json");
         produtos = await response.json();
 
-        renderizarProdutos(produtos);
+        listaAtual = produtos;
+        pagina = 1;
+
+        renderizarProdutos();
 
     } catch (error) {
         console.error("Erro ao carregar produtos:", error);
@@ -20,11 +30,16 @@ async function carregarProdutos() {
 }
 
 // =========================
-// RENDERIZAR PRODUTOS (OTIMIZADO)
+// RENDERIZAR PRODUTOS
 // =========================
-function renderizarProdutos(lista) {
+function renderizarProdutos() {
 
-    if (!lista || lista.length === 0) {
+    const inicio = (pagina - 1) * porPagina;
+    const fim = inicio + porPagina;
+
+    const itens = listaAtual.slice(inicio, fim);
+
+    if (itens.length === 0 && pagina === 1) {
         productGrid.innerHTML = `
             <div class="not-found">
                 <h2>Produto não encontrado</h2>
@@ -34,32 +49,54 @@ function renderizarProdutos(lista) {
         return;
     }
 
-    // 🔥 monta tudo de uma vez (bem mais rápido)
-    const html = lista.map(p => `
+    const html = itens.map(p => `
         <div class="product-card">
-
-            <img src="${p.imagem}" alt="${p.nome}">
-
+            <img loading="lazy" src="${p.imagem}" alt="${p.nome}">
             <div class="product-info">
-
                 <h3>${p.nome}</h3>
-
                 <span class="price">${p.preco}</span>
-
                 <a href="${p.link}" target="_blank" class="offer-btn">
                     Ver Produto
                 </a>
-
             </div>
-
         </div>
     `).join("");
 
-    productGrid.innerHTML = html;
+    productGrid.innerHTML += html;
+
+    criarBotaoCarregarMais();
 }
 
 // =========================
-// PESQUISA OTIMIZADA (DEBOUNCE)
+// BOTÃO CARREGAR MAIS
+// =========================
+function criarBotaoCarregarMais() {
+
+    const jaExiste = document.getElementById("btn-carregar-mais");
+    if (jaExiste) jaExiste.remove();
+
+    const totalExibidos = pagina * porPagina;
+
+    if (totalExibidos >= listaAtual.length) return;
+
+    const btn = document.createElement("button");
+    btn.id = "btn-carregar-mais";
+    btn.innerText = "Carregar mais";
+    btn.style.display = "block";
+    btn.style.margin = "20px auto";
+    btn.style.padding = "10px 20px";
+    btn.style.cursor = "pointer";
+
+    btn.addEventListener("click", () => {
+        pagina++;
+        renderizarProdutos();
+    });
+
+    productGrid.appendChild(btn);
+}
+
+// =========================
+// PESQUISA
 // =========================
 let timeout;
 
@@ -71,25 +108,23 @@ function pesquisarProdutos() {
 
         const termo = searchInput.value.toLowerCase().trim();
 
-        if (!termo) {
-            renderizarProdutos(produtos);
-            return;
-        }
+        listaAtual = termo
+            ? produtos.filter(p =>
+                p.nome.toLowerCase().includes(termo)
+              )
+            : produtos;
 
-        const filtrados = produtos.filter(produto =>
-            produto.nome.toLowerCase().includes(termo)
-        );
+        pagina = 1;
+        productGrid.innerHTML = "";
+        renderizarProdutos();
 
-        renderizarProdutos(filtrados);
-
-    }, 250); // atraso leve pra não travar
+    }, 200);
 }
 
 // =========================
 // EVENTOS
 // =========================
 searchInput.addEventListener("input", pesquisarProdutos);
-
 searchBtn.addEventListener("click", pesquisarProdutos);
 
 // =========================
