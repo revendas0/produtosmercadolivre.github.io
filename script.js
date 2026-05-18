@@ -118,6 +118,10 @@ function criarBotaoCarregarMais() {
     wrapper.classList.add("load-more-wrapper");
     wrapper.style.marginTop = "30px";
 
+    btn.style.padding = "12px 26px";
+    btn.style.borderRadius = "14px";
+    btn.style.fontSize = "15px";
+
     // botão
     const btn = document.createElement("button");
 
