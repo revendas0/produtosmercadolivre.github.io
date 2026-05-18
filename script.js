@@ -8,46 +8,34 @@ const searchBtn = document.getElementById("searchBtn");
 // CARREGAR PRODUTOS DO JSON
 // =========================
 async function carregarProdutos() {
-
     try {
-
         const response = await fetch("./produtos.json");
-
         produtos = await response.json();
 
         renderizarProdutos(produtos);
 
     } catch (error) {
-
         console.error("Erro ao carregar produtos:", error);
-
     }
 }
 
 // =========================
-// RENDERIZAR PRODUTOS
+// RENDERIZAR PRODUTOS (OTIMIZADO)
 // =========================
 function renderizarProdutos(lista) {
 
-    productGrid.innerHTML = "";
-
-    // SE NÃO ENCONTRAR PRODUTOS
-    if (lista.length === 0) {
-
+    if (!lista || lista.length === 0) {
         productGrid.innerHTML = `
             <div class="not-found">
                 <h2>Produto não encontrado</h2>
                 <p>Tente pesquisar outro produto.</p>
             </div>
         `;
-
         return;
     }
 
-    // RENDERIZAR PRODUTOS
-    lista.forEach(p => {
-
-        productGrid.innerHTML += `
+    // 🔥 monta tudo de uma vez (bem mais rápido)
+    const html = lista.map(p => `
         <div class="product-card">
 
             <img src="${p.imagem}" alt="${p.nome}">
@@ -65,22 +53,36 @@ function renderizarProdutos(lista) {
             </div>
 
         </div>
-        `;
-    });
+    `).join("");
+
+    productGrid.innerHTML = html;
 }
 
 // =========================
-// PESQUISAR PRODUTOS
+// PESQUISA OTIMIZADA (DEBOUNCE)
 // =========================
+let timeout;
+
 function pesquisarProdutos() {
 
-    const termo = searchInput.value.toLowerCase().trim();
+    clearTimeout(timeout);
 
-    const filtrados = produtos.filter(produto =>
-        produto.nome.toLowerCase().includes(termo)
-    );
+    timeout = setTimeout(() => {
 
-    renderizarProdutos(filtrados);
+        const termo = searchInput.value.toLowerCase().trim();
+
+        if (!termo) {
+            renderizarProdutos(produtos);
+            return;
+        }
+
+        const filtrados = produtos.filter(produto =>
+            produto.nome.toLowerCase().includes(termo)
+        );
+
+        renderizarProdutos(filtrados);
+
+    }, 250); // atraso leve pra não travar
 }
 
 // =========================
