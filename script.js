@@ -117,10 +117,7 @@ function criarBotaoCarregarMais() {
 
     wrapper.classList.add("load-more-wrapper");
     wrapper.style.marginTop = "30px";
-
-    btn.style.padding = "12px 26px";
-    btn.style.borderRadius = "14px";
-    btn.style.fontSize = "15px";
+    
 
     // botão
     const btn = document.createElement("button");
@@ -128,6 +125,16 @@ function criarBotaoCarregarMais() {
     btn.innerText = "Carregar mais";
 
     btn.classList.add("offer-btn");
+    btn.style.background = "linear-gradient(180deg, #ffe24a 0%, #f7d420 100%)";
+btn.style.color = "#000";
+btn.style.border = "none";
+btn.style.borderRadius = "14px";
+btn.style.padding = "12px 26px";
+btn.style.fontWeight = "700";
+btn.style.fontSize = "15px";
+btn.style.cursor = "pointer";
+btn.style.boxShadow = "0 6px 18px rgba(255, 217, 0, 0.25)";
+btn.style.marginTop = "30px";
     // clique
     btn.addEventListener("click", () => {
 
